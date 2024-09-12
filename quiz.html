@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>quiz</title>
+
+    <script>
+
+
+        var num = prompt("Select an integer between 1 and 10 (both inclusive)");
+        console.log(typeof(num)); //string
+
+        if (!num || /[a-zA-Z]/.test(num) || (!isNaN(num) && num.toString().indexOf('.') !== -1) || parseInt(num) < 1 || parseInt(num) > 10){
+            alert("thats not a valid input!");
+        }
+        else if (parseInt(num) >= 1 && parseInt(num) <= 10){
+            function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+           
+            let randomInt = getRandomInt(1, 10); 
+            if (randomInt == num){
+                window.location.href = "aboutme.html";
+            }
+            else{
+                alert("Nope! Better luck next time!")
+            }
+
+        }
+
+    </script>
+
 </head>
 <body>
-    good job
+    
 </body>
 </html>

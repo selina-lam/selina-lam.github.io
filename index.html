@@ -8,8 +8,11 @@
     <link rel="icon" type="image/x-icon" href="images/cat.ico">
     <style>
         body{
-            background-color: rgb(213, 248, 246);
+            background-color: rgb(220, 167, 117);
+            padding-top: 175px;
         }
+
+
     </style>
     <!-- <style>
 
@@ -92,19 +95,33 @@
     <div class="container rounded border border-black my-4">
         <div class="row col-12 mx-auto p-2 text-center m">
             <p class="fs-1">Welcome to my webpage!</p>
-            <p class="fs-3">Before you can see my webpage, you have to answer a few questions first. Are you ready?</p>
+            <p class="fs-3">Before you can see my webpage, you have to play a simple game first. Are you ready?</p>
         </div>
     </div>
 
     <div class="container">
         <div class="row">
             <div class="col-6 d-grid gap-2">
-               <button type="button" class="btn btn-outline-success">yup!</button>
+               <button type="button" class="btn btn-outline-success" id="yesBtn">yup!</button>
             </div>
             <div class="col-6 d-grid gap-2">
-                <button type="button" class="btn btn-outline-danger">nah no thanks</button>
+                <button type="button" class="btn btn-outline-danger" id="noBtn">nah no thanks</button>
             </div>
         </div>
     </div>
+
+    <script>
+        // Handle click for "yup!" button
+        document.getElementById('yesBtn').addEventListener('click', function() {
+            window.location.href = "quiz.html"
+            // Add code here to redirect or show more content
+        });
+
+        // Handle click for "nah no thanks" button
+        document.getElementById('noBtn').addEventListener('click', function() {
+            alert('Maybe next time!');
+            // Add code here to redirect to another page or close the webpage
+        });
+    </script>
 </body>
 </html>
